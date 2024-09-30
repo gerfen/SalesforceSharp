@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Net;
-using NUnit.Framework;
+using NUnit;
 using RestSharp;
 using Rhino.Mocks;
 using SalesforceSharp.Security;
@@ -21,7 +21,7 @@ namespace SalesforceSharp.UnitTests
         public void Constructor_NoArgs_DefaultValues()
         {
             var target = new SalesforceClient();
-            Assert.AreEqual("v28.0", target.ApiVersion);
+            Assert.AreEqual("v31.0", target.ApiVersion);
             Assert.IsNull(target.InstanceUrl);
             Assert.IsFalse(target.IsAuthenticated);
         }
